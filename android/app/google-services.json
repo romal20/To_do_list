@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159518057101",
+    "project_id": "to-do-list-novanectar",
+    "storage_bucket": "to-do-list-novanectar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159518057101:android:bac63e03048e3f8c0fb8c4",
+        "android_client_info": {
+          "package_name": "com.example.to_do_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9WIfyOnfuvXc2hkvUWivK8bUifqNWq0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
