@@ -27,22 +27,6 @@ class TaskController extends GetxController {
     }
   }
 
-  /*void getTasks() async {
-    try {
-      String userId = FirebaseAuth.instance.currentUser?.uid ?? '';
-      if (userId.isNotEmpty) {
-        List<Task> tasks = await DbHelper.query(userId);
-        taskList.assignAll(tasks);
-        print("Retrieved tasks: ${taskList.length}"); // Debug print
-      } else {
-        print("Error: User ID is empty.");
-        // Handle the case where user ID is empty
-      }
-    } catch (e) {
-      print("Error fetching tasks: $e");
-      // Handle error appropriately, e.g., show error message or log it
-    }
-  }*/
   void getTasks() async {
     try {
       String userId = FirebaseAuth.instance.currentUser?.uid ?? '';
@@ -51,10 +35,6 @@ class TaskController extends GetxController {
         taskList.assignAll(tasks);
         print("Retrieved tasks: ${taskList.length}"); // Debug print
 
-        // Print all tasks
-        /*for (var task in taskList) {
-          printTaskDetails(task);
-        }*/
       } else {
         print("Error: User ID is empty.");
         // Handle the case where user ID is empty
@@ -64,22 +44,6 @@ class TaskController extends GetxController {
       // Handle error appropriately, e.g., show error message or log it
     }
   }
-
-// Helper method to print task details
-  /*void printTaskDetails(Task task) {
-    print("Task ID: ${task.id}");
-    print("Title: ${task.title}");
-    print("Note: ${task.note}");
-    print("Is Completed: ${task.isCompleted}");
-    print("Date: ${task.date}");
-    print("Start Time: ${task.startTime}");
-    print("End Time: ${task.endTime}");
-    print("Color: ${task.color}");
-    print("Remind: ${task.remind}");
-    print("Repeat: ${task.repeat}");
-    print("-----");
-  }
-*/
 
   void deleteTask(Task task) async {
     try {

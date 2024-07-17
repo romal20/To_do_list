@@ -5,18 +5,6 @@ class DbHelper {
   static FirebaseFirestore _firestore = FirebaseFirestore.instance;
   static final String _usersCollection = 'Users';
 
-  /*static Future<String> insert(Task task, String userId) async {
-    try {
-      DocumentReference docRef = await _firestore
-          .collection('tasks')
-          .add(task.toJson());
-      return docRef.id; // Return the document ID of the inserted record
-    } catch (e) {
-      print('Error inserting task: $e');
-      throw e; // Throw the error to be handled by the caller
-    }
-  }*/
-
   static Future<String> insert(Task task, String userId) async {
     try {
       // Generate a new document reference with a specified ID
@@ -51,37 +39,6 @@ class DbHelper {
     }
   }
 
-  /*static Future<void> delete(Task task, String userId) async {
-    try {
-      await _firestore
-          .collection(_usersCollection)
-          .doc(userId)
-          .collection('tasks')
-          .doc(task.id ?? '')
-          .delete();
-    } catch (e) {
-      print('Error deleting task: $e');
-      throw e; // Throw the error to be handled by the caller
-    }
-  }*/
-  /*static Future<void> delete(Task task, String userId) async {
-    try {
-      if (task.id == null || task.id!.isEmpty) {
-        print('Error: Task ID is null or empty.');
-        return;
-      }
-      await _firestore
-          .collection(_usersCollection)
-          .doc(userId)
-          .collection('tasks')
-          .doc(task.id)
-          .delete();
-      print('Task deleted successfully.');
-    } catch (e) {
-      print('Error deleting task: $e');
-      throw e; // Throw the error to be handled by the caller
-    }
-  }*/
   static Future<void> delete(Task task, String userId) async {
     try {
       QuerySnapshot querySnapshot = await _firestore
@@ -107,19 +64,6 @@ class DbHelper {
     }
   }
 
-  /*static Future<void> update(Task task, String userId) async {
-    try {
-      await _firestore
-          .collection(_usersCollection)
-          .doc(userId)
-          .collection('tasks')
-          .doc(task.id ?? '')
-          .update(task.toJson());
-    } catch (e) {
-      print('Error updating task: $e');
-      throw e; // Throw the error to be handled by the caller
-    }
-  }*/
   static Future<void> update(Task task, String userId) async {
     try {
       // Query Firestore to find the document ID based on the task's ID

@@ -9,40 +9,6 @@ const Color pinkClr = Color(0xFFff4667);
 const primaryClr = bluishClr;
 const Color darkGreyClr = Color(0xFF121212);
 Color darkHeaderClr = Color(0xFF424242);
-/*
-class Themes {
-  static final light = ThemeData(
-      colorScheme: ColorScheme.light(primary: primaryClr),
-//      primaryColor: primaryClr, //Changes color of appbar and buttons not text
-      brightness: Brightness.light //Compares bgcolor with text color.
-  );
-  static final dark = ThemeData(
-      colorScheme: ColorScheme.dark(primary: darkGreyClr),
-//      primaryColor: darkGreyClr,
-      //Changes color of appbar and buttons not text
-      brightness: Brightness.dark //Compares bgcolor with text color.
-  );
-}*/
-
-/*class Themes {
-  static final light = ThemeData(
-    //colorScheme: ColorScheme.light(primary: white),
-    brightness: Brightness.light,
-    appBarTheme: AppBarTheme(
-      backgroundColor: primaryClr,
-      foregroundColor: Colors.white, // Text color
-    ),
-  );
-
-  static final dark = ThemeData(
-    //colorScheme: ColorScheme.dark(primary: darkGreyClr),
-    brightness: Brightness.dark,
-    appBarTheme: AppBarTheme(
-      backgroundColor: darkHeaderClr,
-      foregroundColor: Colors.white, // Text color
-    ),
-  );
-}*/
 
 class Themes {
   static final light = ThemeData(
