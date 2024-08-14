@@ -1,6 +1,6 @@
 # to_do_list
 
-NovaNectar Elementary Task for App Development
+Todo List
 
 ## Getting Started
 
